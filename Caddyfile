@@ -1,0 +1,35 @@
+# FTW n8n Production Compose (free edition) - Caddy reverse proxy
+#
+# CADDY_TLS in .env:
+#   you@example.com  -> automatic HTTPS from Let's Encrypt / ZeroSSL (ports 80+443 reachable from the internet)
+#   internal         -> Caddy's local CA, for testing on localhost or a private network (browser warning)
+{
+	# admin API only inside the container (used by the healthcheck and `caddy reload`)
+	admin 127.0.0.1:2019
+}
+
+{$N8N_DOMAIN} {
+	tls {$CADDY_TLS}
+	encode zstd gzip
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+	}
+
+	# n8n's Prometheus endpoint is never exposed publicly.
+	@metrics path /metrics /metrics/*
+	respond @metrics 404
+
+	reverse_proxy n8n:5678 {
+		# keep server-sent events / push connections streaming
+		flush_interval -1
+	}
+
+	log {
+		output stdout
+		format json
+	}
+}

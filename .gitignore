@@ -1,0 +1,7 @@
+PUBLISHING.md
+.env
+.env.*
+!.env.example
+.DS_Store
+.e2e-*/
+.check-config/
