@@ -19,7 +19,7 @@ echo "==> scripts/init-secrets.sh"
 "$WORK/scripts/init-secrets.sh" >/dev/null
 ENV="$WORK/.env"
 check '[ -f "$ENV" ]' ".env created"
-check '[ "$(stat -f %Lp "$ENV" 2>/dev/null || stat -c %a "$ENV")" = 600 ]' ".env is mode 600"
+check '[ "$(stat -c %a "$ENV" 2>/dev/null || stat -f %Lp "$ENV")" = 600 ]' ".env is mode 600"
 
 key="$(sed -n 's/^N8N_ENCRYPTION_KEY=//p' "$ENV")"
 pass="$(sed -n 's/^POSTGRES_PASSWORD=//p' "$ENV")"

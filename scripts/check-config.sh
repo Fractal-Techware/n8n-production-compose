@@ -22,7 +22,9 @@ ok()   { echo "  ok  $*"; }
 get() { sed -n "s/^$1=//p" "$ENV_FILE" | tail -1; }
 
 # --- file permissions ---------------------------------------------------------
-mode="$(stat -f "%Sp" "$ENV_FILE" 2>/dev/null || stat -c "%A" "$ENV_FILE")"
+# GNU stat first: on Linux `stat -f` succeeds but prints filesystem info, so trying the
+# BSD form first would silently return the wrong string instead of falling through.
+mode="$(stat -c "%A" "$ENV_FILE" 2>/dev/null || stat -f "%Sp" "$ENV_FILE")"
 case "$mode" in
   -rw-------) ok ".env is not readable by other users" ;;
   *) err ".env is $mode; it holds your encryption key and database password. Run: chmod 600 $ENV_FILE" ;;
