@@ -30,7 +30,7 @@ every container is locked down and every secret is generated on your machine.
 - **120 checks you can run** — including an end-to-end test that starts this exact stack, curls
   it over HTTPS and inspects the running containers
 
-By [Fractal Techware](https://fractaltechware.gumroad.com/?utm_source=github&utm_medium=readme&utm_campaign=free-repo). MIT licensed.
+By [Fractal Techware](https://store.fractaltechware.com/?utm_source=github&utm_medium=readme&utm_campaign=free-repo). MIT licensed.
 
 ## What's included
 
@@ -109,7 +109,7 @@ Everything that *is* here is tested, pinned and meant for production use.
 ## Want the full kit?
 
 This stack is the free, MIT-licensed sample of the
-**[n8n Production Self-Hosting Kit](https://fractaltechware.gumroad.com/l/n8n-production-kit?utm_source=github&utm_medium=readme&utm_campaign=free-repo)**.
+**[n8n Production Self-Hosting Kit](https://store.fractaltechware.com/l/n8n-production-kit?utm_source=github&utm_medium=readme&utm_campaign=free-repo)**.
 
 | | **Free** (this repo) | **Starter** $19 | **Pro** $49 | **Studio** $99 |
 |---|:---:|:---:|:---:|:---:|
@@ -123,7 +123,7 @@ This stack is the free, MIT-licensed sample of the
 | Git-based workflow promotion with CI, Kubernetes sizing guide, client delivery checklist | – | – | – | yes |
 | License | MIT | own organization | own organization | client / agency use |
 
-[See the full kit on Gumroad →](https://fractaltechware.gumroad.com/l/n8n-production-kit?utm_source=github&utm_medium=readme&utm_campaign=free-repo)
+[See the full kit on Gumroad →](https://store.fractaltechware.com/l/n8n-production-kit?utm_source=github&utm_medium=readme&utm_campaign=free-repo)
 · More free, tested infrastructure repos at [github.com/Fractal-Techware](https://github.com/Fractal-Techware)
 
 ## Contributing
