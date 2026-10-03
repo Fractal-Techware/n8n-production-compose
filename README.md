@@ -100,7 +100,11 @@ Honest limits, so you know what you are adopting:
 - **One host, one n8n process.** Fine for most teams; it is not queue mode, so executions are
   not spread over workers and a restart interrupts running executions.
 - **No monitoring stack.** n8n's Prometheus endpoint stays off and unexposed; there is no
-  Prometheus, Grafana or alerting here.
+  Prometheus, Grafana or alerting here. The kit's n8n dashboard is published free on
+  grafana.com as import ID [**25836**](https://grafana.com/grafana/dashboards/25836-n8n-production-overview-queue-mode/)
+  if you already run Prometheus and Grafana — it is built for queue mode, so on this
+  single-instance stack you would enable n8n's metrics endpoint, scrape it, and the
+  worker and webhook-processor panels stay empty.
 - **No backup/restore scripts** and no Kubernetes. See the kit if you need those.
 - **Secrets live in `.env`**, not in a secret manager. It is mode 600 and gitignored.
 
