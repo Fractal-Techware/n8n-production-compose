@@ -135,6 +135,23 @@ This stack is the free, MIT-licensed sample of the
 Issues and pull requests are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). Changes to the
 stack need a matching assertion in `tests/`.
 
+## More free editions from Fractal Techware
+
+Every pack has a free, MIT-licensed edition. These are the other nine — all runnable, all with
+their own tests.
+
+- [Prometheus Alert Rules & Runbooks](https://github.com/Fractal-Techware/prometheus-alert-rules) — tested alert rules, each with a runbook
+- [Kubernetes Hardening Baseline](https://github.com/Fractal-Techware/kubernetes-hardening-baseline) — Kyverno policies proven with enforce semantics
+- [Production Helm Chart](https://github.com/Fractal-Techware/helm-production-chart) — library chart with secure defaults and helm-unittest suites
+- [OpenTelemetry Collector Recipes](https://github.com/Fractal-Techware/opentelemetry-collector-recipes) — collector configs: tail sampling, PII redaction, Kubernetes
+- [Grafana Dashboards](https://github.com/Fractal-Techware/grafana-dashboards) — provisioned dashboards for hosts, Kubernetes and Prometheus
+- [SLO as Code](https://github.com/Fractal-Techware/slo-as-code) — SLIs, error budgets and burn-rate alerts generated from YAML
+- [VPS Observability Stack](https://github.com/Fractal-Techware/vps-observability-stack) — single-server Prometheus, Grafana and Loki behind Caddy
+- [n8n Incident Triage](https://github.com/Fractal-Techware/n8n-incident-triage-workflow) — Alertmanager to LLM triage to chat, as n8n workflows
+- [n8n GitHub PR Summary](https://github.com/Fractal-Techware/n8n-github-pr-summary) — AI pull-request review and summary workflows
+
+The paid tiers and the full catalogue are at [fractaltechware.com](https://fractaltechware.com).
+
 ## License
 
 [MIT](LICENSE) © Fractal Techware SRL. n8n itself is distributed under the
