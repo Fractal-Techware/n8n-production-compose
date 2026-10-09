@@ -115,7 +115,7 @@ Everything that *is* here is tested, pinned and meant for production use.
 This stack is the free, MIT-licensed sample of the
 **[n8n Production Self-Hosting Kit](https://store.fractaltechware.com/l/n8n-production-kit?utm_source=github&utm_medium=readme&utm_campaign=free-repo)**.
 
-| | **Free** (this repo) | **Starter** $19 | **Pro** $49 | **Studio** $99 |
+| | **Free** (this repo) | **Starter** $19 | **Pro** $49 | **Agency** $299 |
 |---|:---:|:---:|:---:|:---:|
 | Hardened single-instance stack (n8n + runner + PostgreSQL + Caddy) | yes | yes | yes | yes |
 | Generated secrets, config check, HTTPS | yes | yes | yes | yes |
